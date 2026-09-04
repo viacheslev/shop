@@ -54,7 +54,7 @@ function images() {
 
 
 function styles() {
-  return src('app/scss/*.scss')
+  return src('app/scss/style.scss')
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions']
     }))
