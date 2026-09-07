@@ -326,3 +326,54 @@ body {
     font-size: 11px;
   }
 }
+
+.designer {
+  padding: 150px 0 210px;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  &__content {
+    max-width: 404px;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    color: vars.$color-text-muted;
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+
+  &__box {
+    position: relative;
+    text-align: center;
+  }
+
+  &__img {margin-bottom: 40px;}
+
+  &__caption {
+    position: absolute;
+    @extend %lora-400;
+    padding: 20px 18px;
+    border: 3px solid vars.$bg-primary;
+    top: 180px;
+    left: -160px;
+    width: 296px;
+    background-color: #fff;
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 93px;
+    color: vars.$color-text-muted;
+    border: 1px solid vars.$bg-primary;
+  }
+}
