@@ -263,3 +263,66 @@ body {
     color: vars.$color-text-muted;
   }
 }
+
+.join-us {
+  background-color: vars.$bg-primary;
+
+  &__inner {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px;
+  }
+
+  &__img {
+    max-width: 540px;
+  }
+
+  &__box {
+    padding: 30px 0px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    @extend %lora-400;
+    margin-bottom: 15px;
+    font-size: 45px;
+  }
+
+  &__text {
+    @extend %lora-400;
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+
+  &__input {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid vars.$color-text-muted;
+    padding-bottom: 10px;
+    @extend %opensans-400;
+    color: vars.$color-text-muted;
+    background-color: transparent;
+  }
+
+  &__input+.join-us__input {
+    padding-top: 10px;
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: vars.$color-accent;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__form-caption {
+    font-size: 11px;
+  }
+}
