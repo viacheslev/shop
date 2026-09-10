@@ -1,0 +1,23 @@
+@use 'vars';
+
+@mixin btn-accent($padding: 12px, $radius: 3px) {
+  background-color: vars.$color-accent;
+  color: white;
+  text-transform: uppercase;
+  padding: $padding;
+  border-radius: $radius;
+}
+
+@mixin btn-white-muted($font-size: 16px, $radius: 0) {
+  font-size: $font-size; 
+  color: vars.$color-text-muted;
+  border: 1px solid vars.$color-text-muted;
+  border-radius: $radius;
+}
+
+@mixin lora-title($size: 45px) {
+  font-family: 'Lora-Regular', serif;
+  font-weight: 400;
+  font-size: $size;
+  text-transform: uppercase;
+}

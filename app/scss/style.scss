@@ -1,5 +1,6 @@
 @use 'reset';
 @use 'vars';
+@use 'mixins';
 @use 'fonts';
 @use 'global';
 
@@ -41,7 +42,7 @@ body {
   &__lang {
     display: flex;
 
-    &--active {
+    &-item--active {
       @extend %opensans-700;
     }
   }
@@ -93,6 +94,10 @@ body {
     margin-bottom: 20px;
   }
 
+  &__adress {
+    font-style: normal;
+  }
+
   &__element-list {
     margin-bottom: 5px;
   }
@@ -108,9 +113,7 @@ body {
   }
 
   &__form-input {
-    display: block;
     width: 100%;
-    border: none;
     border-bottom: 1px solid vars.$bg-primary;
     color: vars.$color-text-muted;
     padding: 1px 30px 5px 0;
@@ -189,11 +192,9 @@ body {
 
   &__link {
     display: inline-block;
-    text-transform: uppercase;
-    color: #fff;
-    background-color: vars.$color-accent;
-    padding: 12px 38px;
-    border-radius: 3px;
+    @include mixins.btn-accent;
+    text-align: center;
+    width: 275px;
   }
 }
 
@@ -216,8 +217,7 @@ body {
 
   &__title {
     margin-bottom: 50px;
-    font-size: 45px;
-    @extend %lora-400;
+    @include mixins.lora-title;
   }
 
   &__text {
@@ -230,9 +230,7 @@ body {
 
   &__btn {
     display: inline-block;
-    font-size: 16px;
-    color: vars.$color-text-muted;
-    border: 1px solid vars.$bg-primary;
+    @include mixins.btn-white-muted;
     padding: 10px 65px;
     margin-top: auto;
     align-self: flex-start;
@@ -278,14 +276,15 @@ body {
   }
 
   &__box {
-    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__title {
     text-transform: uppercase;
-    @extend %lora-400;
+    @include mixins.lora-title;
     margin-bottom: 15px;
-    font-size: 45px;
   }
 
   &__text {
@@ -296,28 +295,26 @@ body {
 
   &__input {
     width: 100%;
-    display: block;
-    border: none;
     border-bottom: 1px solid vars.$color-text-muted;
     padding-bottom: 10px;
     @extend %opensans-400;
     color: vars.$color-text-muted;
-    background-color: transparent;
   }
 
-  &__input+.join-us__input {
+  label {
+    display: block;
+  }
+
+  label+label {
     padding-top: 10px;
+    margin-bottom: 40px;
   }
 
   &__btn {
     display: block;
     width: 100%;
-    margin-top: 40px;
     margin-bottom: 20px;
-    background-color: vars.$color-accent;
-    text-transform: uppercase;
-    color: #fff;
-    padding: 12px;
+    @include mixins.btn-accent;
     border: none;
     cursor: pointer;
     position: relative;
@@ -352,8 +349,7 @@ body {
   }
 
   &__title {
-    @extend %lora-400;
-    font-size: 45px;
+    @include mixins.lora-title;
     margin-bottom: 50px;
   }
 
@@ -385,10 +381,8 @@ body {
 
   &__link {
     display: inline-block;
-    font-size: 16px;
+    @include mixins.btn-white-muted;
     padding: 10px 93px;
-    color: vars.$color-text-muted;
-    border: 1px solid vars.$bg-primary;
   }
 }
 
@@ -420,8 +414,7 @@ body {
   }
 
   &__title {
-    @extend %lora-400;
-    font-size: 45px;
+    @include mixins.lora-title;
     margin-bottom: 50px;
   }
 
@@ -461,8 +454,7 @@ body {
   }
 
   &__title {
-    @extend %lora-400;
-    font-size: 45px;
+    @include mixins.lora-title;
     margin-bottom: 50px;
   }
 
@@ -474,11 +466,9 @@ body {
   }
 
   &__btn-link {
-    font-size: 16px;
+    @include mixins.btn-white-muted;
     display: inline-block;
     padding: 10px 93px;
-    border: 1px solid vars.$bg-primary;
-    color: vars.$color-text-muted;
   }
 
   &__link {
@@ -517,8 +507,7 @@ body {
 
   &__title {
     text-align: center;
-    font-size: 45px;
-    @extend %lora-400;
+    @include mixins.lora-title;
     margin-bottom: 77px;
   }
 
@@ -539,6 +528,7 @@ body {
     font-size: 30px;
     @extend %lora-400;
     margin-bottom: 80px;
+    text-transform: uppercase;
   }
 
   &__form-text {
@@ -550,10 +540,8 @@ body {
   &__input {
     padding-bottom: 10px;
     margin-bottom: 20px;
-    border: none;
     border-bottom: 1px solid vars.$color-text-muted;
     color: vars.$color-text-muted;
-    background-color: transparent;
 
     &::placeholder {
       color: vars.$color-text-muted;
@@ -562,12 +550,8 @@ body {
 
   &__btn {
     margin-top: auto;
-    color: #fff;
-    text-transform: uppercase;
-    padding: 12px;
-    border-radius: 3px;
+    @include mixins.btn-accent;
     border: none;
-    background-color: vars.$color-accent;
     cursor: pointer;
   }
 
@@ -622,8 +606,7 @@ body {
   }
 
   &__title {
-    @extend %lora-400;
-    font-size: 45px;
+    @include mixins.lora-title;
     margin-bottom: 50px;
     text-align: center;
   }
@@ -720,11 +703,8 @@ body {
     left: 0;
     right: 0;
     text-align: center;
-    padding: 12px;
-    text-transform: uppercase;
+    @include mixins.btn-accent($radius: 0px);
     @extend %lora-400;
-    background-color: vars.$color-accent;
-    color: #fff;
   }
 }
 

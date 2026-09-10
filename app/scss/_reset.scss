@@ -49,6 +49,12 @@ svg {
   display: block;
 }
 
+input {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
 @media (favors-reduced-motion: reduce) {
 
   *,
