@@ -9,10 +9,11 @@
 }
 
 @mixin btn-white-muted($font-size: 16px, $radius: 0) {
-  font-size: $font-size; 
+  font-size: $font-size;
   color: vars.$color-text-muted;
   border: 1px solid vars.$color-text-muted;
   border-radius: $radius;
+  background-color: transparent;
 }
 
 @mixin lora-title($size: 45px) {

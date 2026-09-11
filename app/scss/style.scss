@@ -2,6 +2,7 @@
 @use 'vars';
 @use 'mixins';
 @use 'fonts';
+@use '../../node_modules/swiper/swiper-bundle.css';
 @use 'global';
 
 body {
@@ -752,5 +753,240 @@ body {
 
   &__arrow-disable {
     display: none;
+  }
+}
+
+.product {
+  padding-bottom: 150px;
+
+  .radio-box,
+  .check-box {
+    display: inline-block;
+  }
+
+  &__inner {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 2fr 1.1fr;
+    padding-right: 40px;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+
+    picture:nth-child(2) {
+      grid-row: span 2;
+    }
+
+    img {
+      max-width: max-content;
+    }
+  }
+
+  &__content {
+    dl {
+      margin-left: 0;
+    }
+
+    dd {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    @include mixins.lora-title;
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    @extend %opensans-700;
+    font-size: 25px;
+    color: vars.$color-primary;
+  }
+
+  &__content-list {
+    font-size: 16px;
+    color: vars.$color-primary;
+  }
+
+  &__content-term {
+    @extend %opensans-700;
+  }
+
+  &__content-difinition {
+    margin-bottom: 30px;
+  }
+
+  &__content-text {
+    color: vars.$color-text-muted;
+    margin-bottom: 30px;
+  }
+
+  &__buttons {
+    display: grid;
+    gap: 6px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  &__btn {
+    @include mixins.btn-white-muted($radius: 3px);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+  }
+
+  &__btn-addbag {
+    grid-column: 1/-1;
+    font-size: 20px;
+  }
+
+  &__content-checkbox {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__content-radio {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.radio-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 26px;
+
+  &:checked+.radio-style::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: vars.$color-primary;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+.radio-style {
+  position: absolute;
+  margin-left: -26px;
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid vars.$color-primary;
+}
+
+.check-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  padding-left: 20px;
+
+  &:checked+.check-style::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    background-color: vars.$color-primary;
+    border-radius: 1px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+.check-style {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  border: 1px solid vars.$color-primary;
+}
+
+.checkbox-label {
+  padding-left: 20px;
+}
+
+.radio-label {
+  padding-left: 26px;
+}
+
+.accessories {
+  margin-bottom: 90px;
+
+  &__inner {
+    position: relative;
+  }
+
+  &__decor {
+    position: absolute;
+    right: 64px;
+    top: -100px;
+  }
+
+  &__title {
+    max-width: 890px;
+    margin: 0 auto;
+    @include mixins.lora-title($size: 30px);
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 2px solid vars.$bg-primary;
+    margin-bottom: 40px;
+  }
+
+  &__slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  &__slider-wrapper {}
+
+  &__slide {
+    text-align: center;
+  }
+
+  &__slide-img {
+    margin-bottom: 20px;
+  }
+
+  &__slide-title {
+    margin-bottom: 10px;
+  }
+
+  &__slide-price {
+    @extend %opensans-700;
+  }
+
+  &__arrow {
+    position: absolute;
+    cursor: pointer;
+    top: 40%;
+    z-index: 10;
+  }
+
+  &__arrow-prev {
+    left: 7px;
+  }
+
+  &__arrow-next {
+    right: 7px;
   }
 }
