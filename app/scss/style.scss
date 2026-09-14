@@ -957,8 +957,6 @@ body {
     padding: 0 30px;
   }
 
-  &__slider-wrapper {}
-
   &__slide {
     text-align: center;
   }
@@ -988,5 +986,70 @@ body {
 
   &__arrow-next {
     right: 7px;
+  }
+}
+
+.page-404 {
+
+  &__container {
+    max-width: 1560px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    width: 731px;
+    margin: 205px 14px 0 35px;
+  }
+
+  &__title {
+    @include mixins.lora-title($size: 160px);
+    margin-bottom: 80px;
+  }
+
+  &__link {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+
+    span {
+      @include mixins.lora-title($size: 48px);
+      display: inline-block;
+      max-width: 620px;
+    }
+  }
+}
+
+.moving {
+  opacity: 0.2;
+  overflow: hidden;
+  &__text {
+    @include mixins.lora-title($size: 160px);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 27px;
+    animation-name: moving;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    img {
+      height: 115px;
+      width: 145px;
+    }
+  }
+}
+
+@keyframes moving {
+  0%{
+    transform: translateX(100%);
+  }
+
+  100%{
+    transform: translateX(-100%);
   }
 }
