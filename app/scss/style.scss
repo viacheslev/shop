@@ -1331,3 +1331,141 @@ body {
     }
   }
 }
+
+.reviews {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  &__top-title {
+    font-size: 64px;
+    @extend %lora-400;
+  }
+
+  &__top-link {
+    color: rgba($color: vars.$color-accent, $alpha: 0.4);
+    border-bottom: 1px solid vars.$color-accent;
+    font-size: 24px;
+  }
+
+  &__slider-box {
+    margin-bottom: 60px;
+  }
+
+  &__slider {
+    margin-bottom: 24px;
+    overflow: hidden;
+    width: calc(100vw - (100vw - 1500px)/2);
+
+  }
+
+  &__slider-addreview {
+    display: inline-block;
+    font-size: 16px;
+    padding: 24px 40px;
+    border: 1px solid vars.$color-accent;
+    margin-top: 24px;
+  }
+
+  &__item {
+    padding: 40px 50px;
+    border: 1px solid #dcdddc;
+    margin-top: 20px;
+  }
+
+  &__item-date {
+    font-size: 14px;
+    opacity: 0.4;
+    margin-bottom: 16px;
+  }
+
+  &__item-name {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    font-size: 24px;
+    margin-top: 18px;
+    margin-bottom: 24px;
+  }
+
+  &__item-text {
+    margin-bottom: 24px;
+  }
+
+  &__item-box-img {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__slider-nav {
+    position: absolute;
+    max-width: 1520px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 24px;
+    cursor: pointer;
+  }
+
+  &__arrow-prev {
+    right: 158px;
+  }
+
+  &__arrow-next {
+    right: 0;
+  }
+
+  &__pagination {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    left: auto;
+    width: 100%;
+    color: #C5BDBA;
+
+    .swiper-pagination-current {
+      color: vars.$color-accent;
+      display: inline-block;
+      padding-right: 10px;
+    }
+
+    span+span {
+      padding-left: 10px;
+    }
+  }
+
+  .invisible-img-box {
+    display: none;
+  }
+}
+
+.reviews-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__all {
+    color: rgba($color: vars.$color-accent, $alpha: 0.4);
+    border-bottom: 1px solid vars.$color-accent;
+    font-size: 26px;
+    margin-left: 10px;
+  }
+}

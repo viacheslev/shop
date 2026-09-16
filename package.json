@@ -35,6 +35,7 @@
     "mozjpeg@6.0.1": true,
     "optipng-bin@6.0.0": true,
     "sharp@0.30.3": true,
-    "ttf2woff2@4.0.5": true
+    "ttf2woff2@4.0.5": true,
+    "@parcel/watcher@2.6.0": true
   }
 }
