@@ -65,6 +65,7 @@ body {
 
 .menu {
   display: flex;
+
   &__list {
     display: flex;
     gap: 30px;
@@ -1010,6 +1011,9 @@ body {
 
   &__inner {
     display: flex;
+    img {
+      object-fit: cover;
+    }
   }
 
   &__content {
@@ -1969,6 +1973,8 @@ body {
 
   &__details-del {
     @extend %button-reset;
+    padding: 12px;
+    margin: -12px;
   }
 
   &__item {
@@ -2021,6 +2027,8 @@ body {
     right: 0;
     top: 0px;
     @extend %button-reset;
+    padding: 12px;
+    margin: -12px;
   }
 }
 
