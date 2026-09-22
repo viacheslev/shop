@@ -5,6 +5,7 @@
 @use '../../node_modules/swiper/swiper-bundle.css';
 @use '../../node_modules/nouislider/dist/nouislider.css';
 @use 'global';
+@use 'media';
 
 body {
   @extend %opensans-400;
@@ -35,6 +36,11 @@ body {
     flex-wrap: wrap;
   }
 
+  &__btn {
+    @extend %button-reset;
+    display: none;
+  }
+
   &__logo {
     width: 100%;
     text-align: center;
@@ -43,6 +49,7 @@ body {
 
   &__lang {
     display: flex;
+    margin-right: 215px;
 
     &-item--active {
       @extend %opensans-700;
@@ -57,6 +64,7 @@ body {
 }
 
 .menu {
+  display: flex;
   &__list {
     display: flex;
     gap: 30px;
@@ -112,6 +120,7 @@ body {
   &__form {
     width: 250px;
     position: relative;
+    margin-bottom: 10px;
   }
 
   &__form-input {

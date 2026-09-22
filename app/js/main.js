@@ -1,3 +1,10 @@
+const headerBtn = document.querySelector('.header__btn');
+const menu = document.querySelector('.menu');
+
+headerBtn.addEventListener('click', () => {
+  menu.classList.toggle('menu--active');
+});
+
 const modeContainer = document.querySelector('.view-mode__container');
 const modeBtnGrid = document.querySelector('.view-mode__btn-grid');
 const modeBtnLine = document.querySelector('.view-mode__btn-line');
@@ -61,11 +68,11 @@ noUiSlider.create(rangeSlider, {
 });
 
 rangeSlider.noUiSlider.on('update', (values, handle) => {
-    if (handle === 0) {
-        rangeMin.value = values[0];
-    } else {
-        rangeMax.value = values[1];
-    }
+  if (handle === 0) {
+    rangeMin.value = values[0];
+  } else {
+    rangeMax.value = values[1];
+  }
 });
 
 rangeMin.addEventListener('change', () => {

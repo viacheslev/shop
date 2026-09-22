@@ -1,0 +1,153 @@
+@media (max-width: 1100px) {
+  .header .header__lang {
+    margin-right: 98px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footer {
+    .footer__elements {
+      flex-wrap: wrap;
+      gap: 30px 47px;
+    }
+
+    &__element--social {
+      order: 1;
+      width: 100%;
+
+      .footer__element-title {
+        display: none;
+      }
+
+      .footer__social-list {
+        justify-content: flex-end;
+        margin-top: -25px;
+      }
+    }
+
+    .footer__copy {
+      padding-left: 0px;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .container {
+    max-width: 660px;
+  }
+
+  .header .header__btn {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+  }
+
+  .header .menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #E9E1D7;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px 0 100px;
+    text-align: center;
+    z-index: 5;
+    transform: translateY(-200%);
+    transition: transform .5s ease;
+  }
+
+  .menu.menu--active {
+    transform: translateY(0);
+  }
+
+  .header .header__lang {
+    margin-right: 0;
+    margin-bottom: 100px;
+  }
+
+  .header .header__logo {
+    width: auto;
+    margin-left: auto;
+    margin-right: 87px;
+    margin-bottom: 0;
+  }
+
+  .menu__list {
+    flex-direction: column;
+  }
+
+  .footer__menu-list {
+    position: relative;
+    margin-bottom: 20px;
+    padding-top: 65px;
+    padding-bottom: 30px;
+  }
+
+  .footer__menu-item-logo {
+    position: absolute;
+    top: 5px;
+  }
+
+  .footer .footer__elements {
+    gap: 30px 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 480px;
+  }
+
+  .header {
+    .header__logo {
+      margin-right: auto;
+    }
+  }
+
+  .footer__menu-list {
+    gap: 11px 35px;
+    flex-wrap: wrap;
+  }
+
+  .footer .footer__menu-list {
+    padding-left: 87px;
+    padding-right: 87px;
+  }
+
+  .footer .footer__elements {
+    gap: 30px 100px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer .footer__bottom-inner {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .footer .footer__social-list {
+    justify-content: center;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 470px) {
+  .header .header__actions {
+    gap: 15px;
+  }
+
+  .header .logo__img {
+    width: 162px;
+    height: 16px;
+  }
+
+    .footer .footer__menu-list {
+    padding-left: 27px;
+    padding-right: 27px;
+  }
+}

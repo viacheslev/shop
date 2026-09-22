@@ -1,20 +1,25 @@
 <header class="header">
   <div class="container">
     <div class="header__inner">
+      <button class="header__btn" type="button" aria-label="menu">
+        <svg width="30" height="18">
+              <use xlink:href="images/sprite.svg#mobile-btn"></use>
+            </svg>
+      </button>
       <div class="header__logo">
         <a class="logo" href="#">
           <img width="244" height="26" class="logo__img" src="images/logo.svg" alt="logo">
         </a>
       </div>
-      <ul class="header__lang">
-        <li class="header__lang-item header__lang-item--active">
-          <a class="header__lang-link" href="#">EN</a>/
-        </li>
-        <li class="header__lang-item">
-          <a class="header__lang-link" href="#">UA</a>
-        </li>
-      </ul>
       <nav class="menu">
+        <ul class="header__lang">
+          <li class="header__lang-item header__lang-item--active">
+            <a class="header__lang-link" href="#">EN</a>/
+          </li>
+          <li class="header__lang-item">
+            <a class="header__lang-link" href="#">UA</a>
+          </li>
+        </ul>
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__item-link" href="#">CATALOG</a>
