@@ -22,8 +22,6 @@
     padding-right: 0;
   }
 
-  .new-collection__btn {}
-
   .new-collection__inner {
     gap: 25px;
   }
@@ -41,6 +39,11 @@
   .new-collection {
     background-position: -205px -36%;
   }
+
+  .designer__caption {
+    top: 340px;
+    left: -70px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -55,6 +58,15 @@
 
   .top__title {
     margin-bottom: 48px;
+  }
+
+  .designer__box {
+    max-width: 434px;
+  }
+
+  .designer__img {
+    min-height: 554px;
+    object-fit: cover;
   }
 }
 
@@ -97,6 +109,48 @@
 
   .join-us__text {
     line-height: 1.2;
+  }
+}
+
+@media (max-width: 990px) {
+  .designer__img {
+    min-height: 520px;
+  }
+
+  .designer__box {
+    max-width: 320px;
+  }
+
+  .designer__content {
+    max-width: 320px;
+  }
+
+  .designer__inner {
+    padding: 0;
+  }
+
+  .designer {
+    padding: 100px 0;
+  }
+
+  .designer__img {
+    margin-bottom: 35px;
+  }
+
+  .designer__text:last-child {
+    display: none;
+  }
+
+  .designer__caption {
+    left: 11px;
+    right: 11px;
+    top: 400px;
+  }
+
+  .designer__decor {
+    top: -50px;
+    width: 200px;
+    height: auto;
   }
 }
 
@@ -273,6 +327,52 @@
     background-size: 200px;
     background-position: -67px -58px;
   }
+
+  .designer__caption {
+    left: 22px;
+    right: 22px;
+    top: 200px;
+    font-size: 11px;
+    padding: 10px;
+    width: 177px;
+  }
+
+  .designer__img {
+    min-height: 320px;
+    width: 220px;
+    margin-bottom: 25px;
+  }
+
+  .designer__box {
+    max-width: 220px;
+
+    img {
+      max-height: 320px;
+      width: 100%;
+    }
+  }
+
+  .designer__content {
+    max-width: 220px;
+  }
+
+  .designer__text:nth-child(2) {
+    display: none;
+  }
+
+  .designer__title {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
+  .designer__inner {
+    gap: 20px;
+  }
+
+  .designer__link {
+    padding: 10px;
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -393,7 +493,7 @@
     margin-bottom: 15px;
   }
 
-    .new-collection__content {
+  .new-collection__content {
     min-width: 160px;
   }
 
@@ -403,5 +503,25 @@
 
   .new-collection__text-mobile {
     display: none;
+  }
+
+  .designer__img {
+    min-height: 315px;
+    width: 160px;
+  }
+
+  .designer__box {
+    max-width: 160px;
+  }
+
+  .designer__content {
+    max-width: 160px;
+  }
+
+  .designer__caption {
+    left: 13px;
+    right: 13px;
+    top: 220px;
+    width: 134px;
   }
 }

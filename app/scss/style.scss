@@ -382,7 +382,8 @@ body {
   &__caption {
     position: absolute;
     @extend %lora-400;
-    padding: 20px 18px;
+    text-align: left;
+    padding: 20px 16px;
     border: 3px solid vars.$bg-primary;
     top: 180px;
     left: -160px;
