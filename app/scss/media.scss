@@ -1,12 +1,12 @@
 @media (max-width: 1100px) {
-  .header .header__lang {
+  .header__lang {
     margin-right: 98px;
   }
 }
 
 @media (max-width: 1000px) {
   .footer {
-    .footer__elements {
+    &__elements {
       flex-wrap: wrap;
       gap: 30px 47px;
     }
@@ -14,18 +14,18 @@
     &__element--social {
       order: 1;
       width: 100%;
-
-      .footer__element-title {
-        display: none;
-      }
-
-      .footer__social-list {
-        justify-content: flex-end;
-        margin-top: -25px;
-      }
     }
 
-    .footer__copy {
+    &__element-title {
+      display: none;
+    }
+
+    &__social-list {
+      justify-content: flex-end;
+      margin-top: -25px;
+    }
+
+    &__copy {
       padding-left: 0px;
     }
   }
@@ -36,13 +36,13 @@
     max-width: 660px;
   }
 
-  .header .header__btn {
+  .header__btn {
     display: inline-block;
     position: relative;
     z-index: 10;
   }
 
-  .header .menu {
+  .menu {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -64,12 +64,12 @@
     transform: translateY(0);
   }
 
-  .header .header__lang {
+  .header__lang {
     margin-right: 0;
     margin-bottom: 100px;
   }
 
-  .header .header__logo {
+  .header__logo {
     width: auto;
     margin-left: auto;
     margin-right: 87px;
@@ -92,7 +92,7 @@
     top: 5px;
   }
 
-  .footer .footer__elements {
+  .footer__elements {
     gap: 30px 70px;
   }
 }
@@ -102,10 +102,8 @@
     max-width: 480px;
   }
 
-  .header {
-    .header__logo {
-      margin-right: auto;
-    }
+  .header__logo {
+    margin-right: auto;
   }
 
   .footer__menu-list {
@@ -113,40 +111,40 @@
     flex-wrap: wrap;
   }
 
-  .footer .footer__menu-list {
+  .footer__menu-list {
     padding-left: 87px;
     padding-right: 87px;
   }
 
-  .footer .footer__elements {
+  .footer__elements {
     gap: 30px 100px;
     justify-content: center;
     text-align: center;
   }
 
-  .footer .footer__bottom-inner {
+  .footer__bottom-inner {
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
   }
 
-  .footer .footer__social-list {
+  .footer__social-list {
     justify-content: center;
     margin-top: 0;
   }
 }
 
 @media (max-width: 470px) {
-  .header .header__actions {
+  .header__actions {
     gap: 15px;
   }
 
-  .header .logo__img {
+  .logo__img {
     width: 162px;
     height: 16px;
   }
 
-    .footer .footer__menu-list {
+  .footer__menu-list {
     padding-left: 27px;
     padding-right: 27px;
   }

@@ -5,7 +5,6 @@
 @use '../../node_modules/swiper/swiper-bundle.css';
 @use '../../node_modules/nouislider/dist/nouislider.css';
 @use 'global';
-@use 'media';
 
 body {
   @extend %opensans-400;
@@ -1011,6 +1010,7 @@ body {
 
   &__inner {
     display: flex;
+
     img {
       object-fit: cover;
     }

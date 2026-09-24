@@ -54,13 +54,16 @@ function images() {
 
 
 function styles() {
-  return src('app/scss/style.scss')
-    .pipe(autoprefixer({
+  return src([
+    'app/scss/style.scss', // 1. Сначала берем основные стили
+    'app/scss/media.scss'  // 2. Строго вторым берем файл адаптива
+  ])
+    .pipe(scss({ style: 'compressed' })) // 3. Компилируем оба файла в CSS
+    .pipe(concat('style.min.css'))       // 4. Склеиваем их! Наш media.scss гарантированно окажется внизу
+    .pipe(autoprefixer({                 // 5. Добавляем префиксы в готовый CSS
       overrideBrowserslist: ['last 10 versions']
     }))
-    .pipe(concat('style.min.css'))
-    .pipe(scss({ style: 'compressed' }))
-    .pipe(dest('app/css'))
+    .pipe(dest('app/css'))               // 6. Сохраняем результат
     .pipe(browserSync.stream())
 }
 
