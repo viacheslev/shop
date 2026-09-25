@@ -1,11 +1,11 @@
 const headerBtn = document.querySelector('.header__btn');
 const menu = document.querySelector('.menu');
 
-if (headerBtn && menu) {
-  headerBtn.addEventListener('click', () => {
-    menu.classList.toggle('menu--active');
-  });
-}
+
+headerBtn?.addEventListener('click', () => {
+  menu?.classList.toggle('menu--active');
+});
+
 
 const modeContainer = document.querySelector('.view-mode__container');
 const modeBtnGrid = document.querySelector('.view-mode__btn-grid');
@@ -56,6 +56,21 @@ if (reviewsSlider) {
     pagination: {
       el: '.reviews__pagination',
       type: 'fraction',
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 6,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 8,
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 12,
+        spaceBetween: 16,
+      },
     },
   });
 }

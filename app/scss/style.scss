@@ -1377,7 +1377,13 @@ body {
     margin-bottom: 24px;
     overflow: hidden;
     width: calc(100vw - (100vw - 1500px)/2);
+  }
 
+  &__slide img {
+    width: 169px;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
   }
 
   &__slider-addreview {

@@ -70,6 +70,13 @@
   }
 }
 
+
+
+
+
+
+
+
 @media (max-width: 1000px) {
 
   .footer {
@@ -142,6 +149,13 @@
   }
 }
 
+
+
+
+
+
+
+
 @media (max-width: 990px) {
 
   .designer__img {
@@ -184,6 +198,13 @@
     height: auto;
   }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 920px) {
 
@@ -375,7 +396,28 @@
     font-size: 20px;
     margin-bottom: 50px;
   }
+
+  .reviews__top-link {
+    font-size: 16px;
+  }
+
+  .reviews__top-title {
+    font-size: 38px;
+  }
+
+  .reviews {
+    padding-bottom: 60px;
+  }
+
+  /* 920 */
 }
+
+
+
+
+
+
+
 
 @media (max-width: 650px) {
 
@@ -491,6 +533,13 @@
     padding: 24px 0;
   }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 600px) {
 
@@ -632,7 +681,18 @@
   .appointment {
     background-position: center 97px;
   }
+
+  .reviews__top-title {
+    font-size: 30px;
+  }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 470px) {
 
@@ -778,5 +838,21 @@
   .appointment {
     background-position: right 500px;
     background-size: 164px;
+  }
+
+  .reviews__top-link {
+    font-size: 14px;
+  }
+
+  .reviews__top-title {
+    font-size: 24px;
+  }
+
+  .reviews__slider {
+    margin-bottom: 70px;
+  }
+
+  .reviews__item {
+    padding: 15px 10px;
   }
 }
