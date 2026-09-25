@@ -1192,7 +1192,10 @@ body {
   &__list {
     gap: 50px 20px;
     grid-template-columns: repeat(4, 1fr);
+  }
 
+  &__item-img {
+    height: auto;
   }
 
   &__item-content {
