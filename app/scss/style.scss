@@ -641,6 +641,10 @@ body {
   &__item {
     position: relative;
 
+    img {
+      height: auto;
+    }
+
     &:nth-child(1) {
       grid-area: c1;
     }
