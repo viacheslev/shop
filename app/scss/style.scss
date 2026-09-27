@@ -1524,6 +1524,26 @@ body {
     color: vars.$color-text-muted;
   }
 
+    &-popup {
+    position: relative;
+    @extend %button-reset;
+    font-size: 16px;
+    color: vars.$color-text-muted;
+    padding-right: 20px;
+    display: none;
+  }
+
+  &-popup::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/catalog-sort-arrow.svg);
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 9px;
+    right: 0px;
+    top: 6px;
+  }
+
   &__title {
     @include mixins.lora-title;
   }
@@ -1592,6 +1612,9 @@ body {
   &__content-item {
     text-align: center;
     color: vars.$color-primary;
+    img {
+      height: auto;
+    }
   }
 
   &__item-title {
