@@ -778,6 +778,10 @@ body {
 .product {
   padding-bottom: 150px;
 
+  &__arrow {
+    display: none;
+  }
+
   .radio-box,
   .check-box {
     display: inline-block;
@@ -802,6 +806,7 @@ body {
 
     img {
       max-width: max-content;
+      height: auto;
     }
   }
 
@@ -982,6 +987,7 @@ body {
 
   &__slide-img {
     margin-bottom: 20px;
+    height: auto;
   }
 
   &__slide-title {
@@ -1524,7 +1530,7 @@ body {
     color: vars.$color-text-muted;
   }
 
-    &-popup {
+  &-popup {
     position: relative;
     @extend %button-reset;
     font-size: 16px;
@@ -1612,6 +1618,7 @@ body {
   &__content-item {
     text-align: center;
     color: vars.$color-primary;
+
     img {
       height: auto;
     }

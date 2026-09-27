@@ -84,6 +84,35 @@
   .checkout__details {
     min-width: auto;
   }
+
+  .product__images {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+  }
+
+  .product__images picture:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 2/-1;
+  }
+
+  .product__images picture:nth-child(2) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  .product__images picture:nth-child(3) {
+    grid-column: 2/-1;
+    grid-row: 2/-1;
+  }
+
+  .product__images img {
+    max-width: none;
+    width: 100%;
+  }
+
+  .accessories__decor {
+    top: -100%;
+  }
 }
 
 
@@ -668,6 +697,31 @@
     font-size: 30px;
   }
 
+  .product__images {
+    gap: 10px;
+  }
+
+  .product__inner {
+    gap: 20px;
+    padding-right: 0px;
+  }
+
+  .product__buttons {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .product__images img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .accessories__decor {
+    top: -50px;
+    right: -85px;
+  }
+
   /* 920 */
 }
 
@@ -1050,6 +1104,61 @@
   .collections__title {
     font-size: 30px;
   }
+
+  .product__inner {
+    display: block;
+  }
+
+  .product__images {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .breadcrumbs {
+    padding-bottom: 50px;
+  }
+
+  .product__content {
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .product {
+    padding-bottom: 100px;
+  }
+
+  .product__content-checkbox,
+  .product__content-radio {
+    justify-content: center;
+  }
+
+  .accessories__slider {
+    max-width: 310px;
+  }
+
+  .product__images img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .product {
+    &__arrow {
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      top: 58%;
+      z-index: 10;
+    }
+
+    &__arrow-prev {
+      left: 17px;
+    }
+
+    &__arrow-next {
+      right: 17px;
+    }
+  }
 }
 
 
@@ -1069,6 +1178,31 @@
     width: 100%;
   }
 }
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+  .product__images img {
+    max-width: 290px;
+    margin: 0 auto;
+  }
+
+  .product {
+
+    &__arrow-prev {
+      left: 45px;
+    }
+
+    &__arrow-next {
+      right: 45px;
+    }
+  }
+}
+
 
 
 
@@ -1302,6 +1436,17 @@
 
   .catalog__content-items {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .product {
+
+    &__arrow-prev {
+      left: 9px;
+    }
+
+    &__arrow-next {
+      right: 9px;
+    }
   }
 }
 

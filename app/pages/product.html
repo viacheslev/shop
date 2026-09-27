@@ -6,22 +6,36 @@
   <section class="product">
     <div class="container">
       <div class="product__inner">
-        <div class="product__images">
-          <picture>
-            <source srcset="images/product-1.avif" type="image/avif">
-            <source srcset="images/product-1.webp" type="image/webp">
-            <img width="219" height="369" src="images/product-1.jpg" alt="Lace wedding dress">
-          </picture>
-          <picture>
-            <source srcset="images/product-2.avif" type="image/avif">
-            <source srcset="images/product-2.webp" type="image/webp">
-            <img width="483" height="757" src="images/product-2.jpg" alt="Lace wedding dress">
-          </picture>
-          <picture>
-            <source srcset="images/product-3.avif" type="image/avif">
-            <source srcset="images/product-3.webp" type="image/webp">
-            <img width="219" height="369" src="images/product-3.jpg" alt="Lace wedding dress">
-          </picture>
+        <div class="slider-mobile">
+          <div class="product__images swiper-wrapper">
+            <picture class="swiper-slide">
+              <source srcset="images/product-1.avif" type="image/avif">
+              <source srcset="images/product-1.webp" type="image/webp">
+              <img width="219" height="369" src="images/product-1.jpg" alt="Lace wedding dress">
+            </picture>
+            <picture class="swiper-slide">
+              <source srcset="images/product-2.avif" type="image/avif">
+              <source srcset="images/product-2.webp" type="image/webp">
+              <img width="483" height="757" src="images/product-2.jpg" alt="Lace wedding dress">
+            </picture>
+            <picture class="swiper-slide ">
+              <source srcset="images/product-3.avif" type="image/avif">
+              <source srcset="images/product-3.webp" type="image/webp">
+              <img width="219" height="369" src="images/product-3.jpg" alt="Lace wedding dress">
+            </picture>
+          </div>
+
+          <div class="product__arrow product__arrow-prev">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-left"></use>
+            </svg>
+          </div>
+          <div class="product__arrow product__arrow-next">
+            <svg width="10" height="18">
+              <use xlink:href="images/sprite.svg#arrow-right"></use>
+            </svg>
+          </div>
+
         </div>
         <div class="product__content">
           <h3 class="product__title">NAOMI</h3>
@@ -36,7 +50,7 @@
                 <span class="radio-style"></span>
                 WHITE
               </label>
-              <label  class="radio-label">
+              <label class="radio-label">
                 <input class="radio-box" type="radio">
                 <span class="radio-style"></span>
                 IVORY
@@ -104,7 +118,8 @@
   <section class="accessories">
     <div class="container">
       <div class="accessories__inner">
-        <img width="241" height="619" class="accessories__decor" src="images/accessories-decor.svg" alt="Flower outline">
+        <img width="241" height="619" class="accessories__decor" src="images/accessories-decor.svg"
+          alt="Flower outline">
         <h2 class="accessories__title">ACCESSORIES</h2>
         <div class="accessories__slider">
           <div class="accessories__slider-wrapper swiper-wrapper">
