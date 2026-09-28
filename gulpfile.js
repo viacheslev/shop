@@ -55,15 +55,15 @@ function images() {
 
 function styles() {
   return src([
-    'app/scss/style.scss', // 1. Сначала берем основные стили
-    'app/scss/media.scss'  // 2. Строго вторым берем файл адаптива
+    'app/scss/style.scss',
+    'app/scss/media.scss' 
   ])
-    .pipe(scss({ style: 'compressed' })) // 3. Компилируем оба файла в CSS
-    .pipe(concat('style.min.css'))       // 4. Склеиваем их! Наш media.scss гарантированно окажется внизу
-    .pipe(autoprefixer({                 // 5. Добавляем префиксы в готовый CSS
+    .pipe(scss({ style: 'compressed' }))
+    .pipe(concat('style.min.css'))
+    .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 versions']
     }))
-    .pipe(dest('app/css'))               // 6. Сохраняем результат
+    .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
 
